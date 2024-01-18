@@ -17,10 +17,6 @@ from gensim import models
 from gensim.models import Phrases
 from gensim.models.phrases import Phraser
 
-import pathlib
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
-
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
