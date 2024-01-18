@@ -128,7 +128,7 @@ def main():
         vector = vectorize(trigrams,text_model)
         label = label_prediction(vector,text_model,class_model) 
 
-    st.success(label)    
+    st.success('Label predict: ',label)    
     
 
 
