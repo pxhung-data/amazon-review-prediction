@@ -113,7 +113,9 @@ def main():
     
     st.title('Review Prediction')
     
-    corpus = st.text_area("Enter Review")
+    corpus = st.text_area(
+        "Enter Review",
+        placeholder = 'Enter your review here...')
     text_model = st.radio(
         'Choose the model for text preprocessing',
         ['Bag of Words','TF-IDF'])
