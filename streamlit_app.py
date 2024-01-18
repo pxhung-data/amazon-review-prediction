@@ -17,6 +17,9 @@ from gensim import models
 from gensim.models import Phrases
 from gensim.models.phrases import Phraser
 
+import pathlib
+temp = pathlib.PosixPath
+pathlib.PosixPath = pathlib.WindowsPath
 
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
@@ -127,7 +130,7 @@ def main():
     if st.button('Predict!'):
         trigrams = preprocess_corpus(corpus)
         vector = vectorize(trigrams,text_model)
-        label = loan_prediction(vector,text_model,class_model) 
+        label = label_prediction(vector,text_model,class_model) 
 
     st.success(label)    
     
